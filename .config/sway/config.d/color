@@ -1,0 +1,29 @@
+# Backgrounds
+set $base      "#1d2021"
+set $mantle    "#282828"
+set $crust     "#32302f"
+
+# Surface panels
+set $surface2  "#3c3836"
+set $surface1  "#504945"
+set $surface0  "#665c54"
+
+# Overlays
+set $overlay2  "#504945"
+set $overlay1  "#665c54"
+set $overlay0  "#7c6564"
+
+# Text
+set $text      "#ebdbb2"
+set $subtext1  "#d5c4a1"
+set $subtext0  "#bdae93"
+
+# Accents
+set $red       "#cc241d"
+set $peach     "#d65d0e"
+set $green     "#98971a"
+set $teal      "#689d6a"
+set $sky       "#8ec07c"
+set $sapphire  "#458588"
+set $blue      "#83a598"
+set $magenta   "#d3869b"
