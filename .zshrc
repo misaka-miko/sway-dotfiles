@@ -1,7 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -62,7 +58,7 @@ alias lt='eza --icons=auto --tree'                                     # list fo
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
-alias vc='code'                                                        # gui code editor
+alias vc='code'                                                        
 alias nya='nyancat'                                                        # gui code editor
 # alias fastfetch='fastfetch --logo-type kitty'
 alias ..='cd ..'
