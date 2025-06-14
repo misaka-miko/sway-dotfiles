@@ -1,222 +1,250 @@
-* {
-    font-size: 13px;
-    border-radius: 5px;
-}
+/* Group Styles */
+
+/* Pill Styles */
+@import "groups/pill.css";
+@import "groups/pill-up.css";
+@import "groups/pill-right.css";
+@import "groups/pill-down.css";
+@import "groups/pill-left.css";
+@import "groups/pill-in.css";
+@import "groups/pill-out.css";
+/* Leaf Style */
+@import "groups/leaf.css";
+@import "groups/leaf-inverse.css";
+
+@import "theme.css";
+
+
+/* Dynamic Stuff */
+@import "includes/border-radius.css";
+@import "includes/global.css";
+
+/* Base HyDE Styles */
 
 window#waybar {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "CaskaydiaCove Nerd Font";
-    background-color: transparent;
-    border-bottom: 0px;
-    color: #ebdbb2;
-    transition-property: background-color;
-    transition-duration: .5s;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-tooltip {
-    background: #1d2021;
-    color: #ebdbb2;
-    border-radius: 7px;
-    border-width: 0px;
-}
-
-window#waybar.empty #window {
-    background-color: transparent;
+    background: @bar-bg;
 }
 
 /*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
+ These are groups/islands configs
+
 */
+#leaf,
+#leaf-inverse,
+#leaf-up,
+#leaf-down,
+#leaf-right,
+#leaf-left,
+#pill,
+#pill-right,
+#pill-left,
+#pill-down,
+#pill-up,
+#pill-in,
+#pill-out {
+    background-color: @main-bg;
+    border-style: solid;
+    border-color: @main-bg;
+}
 
-.modules-right {
-    margin: 10px 10px 0 0;
-}
-.modules-center {
-    margin: 10px 0 0 0;
-}
-.modules-left {
-    margin: 10px 0 0 10px;
-}
 
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    /* box-shadow: inset 0 -3px transparent; */
-    border: none;
-}
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-/*
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ebdbb2;
-} */
 
-#workspaces {
-    background-color: #1d2021;
-}
 
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    /* color: #ebdbb2; */
-    /* border-radius: 0; */
     box-shadow: none;
     text-shadow: none;
-    /* padding: 0px; */
-    border-radius: 9px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-left: 0px;
-    padding-left: 3px;
-    padding-right: 3px;
-    margin-right: 0px;
-    color: #ebdbb2;
+    padding: 0em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 0em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    margin-right: 0em;
+    color: @main-fg;
     animation: ws_normal 20s ease-in-out 1;
 }
 
-#workspaces button:first-child {
-    border-radius: 5px 0 0 5px;
-}
-
-#workspaces button:last-child {
-    border-radius: 0 5px 5px 0;
-}
-
-#workspaces button:hover {
-    color: #d79921;
-    animation: ws_hover 20s ease-in-out 1;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#workspaces button.focused {
-    background-color: #665c54;
-    /* box-shadow: inset 0 -3px #ffffff; */
-    margin-left: 3px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-right: 3px;
+#workspaces button.active {
+    background: @wb-act-bg;
+    color: @wb-act-fg;
+    margin-left: 0.3em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    margin-right: 0.3em;
     animation: ws_active 20s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
-#workspaces button.urgent {
-    background-color: #b16286;
+#workspaces button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-fg;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
-#idle_inhibitor,
-#cava,
-#cpu,
-#memory,
-#mpd,
-#scratchpad,
-#mode,
-#window,
-#clock,
-#battery,
-#backlight,
-#wireplumber,
-#tray,
-#custom-power,
-#custon-cava_mviz,
-#mpris,
-#load {
-    padding: 0 10px;
-    background-color: #1d2021;
-    color: #ebdbb2;
+#taskbar button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 0em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    margin-right: 0em;
+    color: @wb-color;
+    animation: tb_normal 20s ease-in-out 1;
 }
 
-#mode {
-    background-color: #689d6a;
-    color: #1d2021;
-    /* box-shadow: inset 0 -3px #ffffff; */
+#taskbar button.active {
+    background: @wb-act-bg;
+    color: @wb-act-color;
+    margin-left: 0.3em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    margin-right: 0.3em;
+    animation: tb_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+#taskbar button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-color;
+    animation: tb_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+
+
+#workspaces,
+#taskbar {
+    padding: 0em;
 }
 
-#cava {
-    padding: 0 5px;
+
+window#waybar.top .modules-left,
+window#waybar.top .modules-center,
+window#waybar.top .modules-right,
+window#waybar.bottom .modules-left,
+window#waybar.bottom .modules-center,
+window#waybar.bottom .modules-right {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+
 }
 
-#battery.charging, #battery.plugged {
-    background-color: #98971a;
-    color: #1d2021;
+window#waybar.top label.module,
+window#waybar.bottom label.module {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
 }
 
-@keyframes blink {
-    to {
-        background-color: #1d2021;
-        color: #ebdbb2;
-    }
+window#waybar.left label.module,
+window#waybar.right label.module {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
 }
 
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-    background-color: #cc241d;
-    color: #ebdbb2;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+window#waybar.right #leaf,
+window#waybar.left #leaf,
+window#waybar.right #leaf-inverse,
+window#waybar.left #leaf-inverse,
+window#waybar.right #leaf-up,
+window#waybar.left #leaf-up,
+window#waybar.right #leaf-down,
+window#waybar.left #leaf-down,
+window#waybar.right #leaf-right,
+window#waybar.left #leaf-right,
+window#waybar.right #leaf-left,
+window#waybar.left #leaf-left,
+window#waybar.right #pill,
+window#waybar.left #pill,
+window#waybar.right #pill-right,
+window#waybar.left #pill-right,
+window#waybar.right #pill-left,
+window#waybar.left #pill-left,
+window#waybar.right #pill-down,
+window#waybar.left #pill-down,
+window#waybar.right #pill-up,
+window#waybar.left #pill-up,
+window#waybar.right #pill-in,
+window#waybar.left #pill-in,
+window#waybar.right #pill-out,
+window#waybar.left #pill-out {
+    padding: 0em;
 }
 
-label:focus {
-    background-color: #000000;
+window#waybar.bottom #leaf,
+window#waybar.bottom #leaf-inverse,
+window#waybar.bottom #leaf-up,
+window#waybar.bottom #leaf-down,
+window#waybar.bottom #leaf-right,
+window#waybar.bottom #leaf-left,
+window#waybar.bottom #pill,
+window#waybar.bottom #pill-right,
+window#waybar.bottom #pill-left,
+window#waybar.bottom #pill-down,
+window#waybar.bottom #pill-up,
+window#waybar.bottom #pill-in,
+window#waybar.bottom #pill-out,
+window#waybar.top #leaf,
+window#waybar.top #leaf-inverse,
+window#waybar.top #leaf-up,
+window#waybar.top #leaf-down,
+window#waybar.top #leaf-right,
+window#waybar.top #leaf-left,
+window#waybar.top #pill,
+window#waybar.top #pill-right,
+window#waybar.top #pill-left,
+window#waybar.top #pill-down,
+window#waybar.top #pill-up,
+window#waybar.top #pill-in,
+window#waybar.top #pill-out {
+    padding: 0em 1em;
+    color: @module-fg;
 }
 
-#wireplumber.muted {
-    background-color: #458588;
+/* ? Dynamic button */
+
+window#waybar.top button,
+window#waybar.bottom button {
+    margin: 0.41em 0.11em;
+    border: 0em;
+    /* padding: 0.1em 0.5em; */
+
 }
 
-#tray > .passive {
-    -gtk-icon-effect: dim;
+window#waybar.left button,
+window#waybar.right button {
+    margin: 0.11em 0.41em;
+    border: 0em
 }
 
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
+
+tooltip {
+    /* all: unset; */
+    background: @main-bg;
+    color: @main-fg;
+    border-width: 0.1pt;
+    border-color: @main-fg ;
 }
 
-#mpd.stopped {
-    background-color: #cc241d;
-    color: #1d2021;
+#tray menu * {
+    min-height: 1.6em;
+
 }
 
-#mpd.playing {
-    background-color: #d79921;
-    color: #1d2021;
+#tray menu separator {
+    min-height: 0.1em;
 }
 
-#mpd.paused {
-    background-color: #b8bb26;
-    color: #1d2021;
-}
-
-#mpris.playing {
-    background-color: #d79921;
-    color: #282828;
-}
-
-#tray menu {
-    font-family: sans-serif;
-}
-
-#scratchpad.empty {
-    background: transparent;
+#language {
+    min-width: 1.11em;
 }

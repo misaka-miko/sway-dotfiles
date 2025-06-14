@@ -1,0 +1,20 @@
+// TODO: remain to be completed
+{
+  "custom/cliphist": {
+    "format": "{0}",
+    "rotate": 0,
+    "exec": "echo ; echo \udb80\udd47 clipboard history",
+    "on-click": "sleep 0.1 && /home/misaka/.config/rofi/cliphist/cliphist.sh",
+    "menu": "on-click-right",
+    "menu-file": "/home/misaka/.config/waybar/menus/clipboard.xml",
+    "menu-actions": {
+      "favorites": "hyde-shell cliphist --favorites",
+      "history": "hyde-shell cliphist --copy",
+      "delete-history": "hyde-shell cliphist --delete",
+      "manage-favorites": "hyde-shell cliphist 'Manage Favorites'",
+      "clear-history": "cliphist wipe",
+    },
+    "interval": 86400,
+    "tooltip": true,
+  },
+}

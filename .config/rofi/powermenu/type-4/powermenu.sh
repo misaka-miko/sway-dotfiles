@@ -95,7 +95,7 @@ case ${chosen} in
 		if [[ -x '/usr/bin/betterlockscreen' ]]; then
 			betterlockscreen -l
 		elif [[ -x '/usr/bin/swaylock' ]]; then
-			swaylock
+			swaylock -f
 		fi
         ;;
     $suspend)
