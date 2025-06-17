@@ -1,0 +1,97 @@
+/* @define-color bar-bg rgba(0, 0, 0, 0); */
+/**/
+/* @define-color main-bg #504945; */
+/* @define-color main-fg #d5c4a1; */
+/**/
+/* @define-color act-bg #076678; */
+/* @define-color act-fg #83a598; */
+/**/
+/* @define-color hvr-bg #458588; */
+/* @define-color hvr-fg #83a598; */
+@import "/home/misaka/.config/wlogout/color.css";
+
+* {
+  font-family: "CaskaydiaCove Nerd Font";
+  background-image: none;
+  transition: 20ms;
+  box-shadow: none;
+}
+
+window {
+  background-color: rgba(12, 12, 12, 0.1);
+  /* background: url("/home/misaka/Pictures/wallpaper/ign-waifu.png"); */
+	background-size: cover;
+	font-size: 16pt;
+	color: #cdd6f4;
+}
+
+
+button {
+	background-repeat: no-repeat;
+ 	background-position: center;
+	background-size: 20%;
+ 	background-color: rgba(200, 220, 255, 0);
+ 	animation: gradient_f 20s ease-in infinite;
+ 	border-radius: 80px; /* Increased border radius for a more rounded look */
+  color: #FFFFFF;
+	border:0px;
+	transition: all 0.2s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+button:focus {
+  background-color: @main-bg;
+  color: #FFFFFF;
+	opacity: 0.8;
+  background-size: 22%;
+	border: 0px;
+}
+
+button:hover {
+  background-color: @hvr-bg;
+	opacity: 0.8;
+  color: #FFFFFF;
+  background-size: 30%;
+  margin: 30px;
+  border-radius: 80px;
+}
+
+/* Adjust the size of the icon or content inside the button */
+button span {
+    font-size: 1.2em; /* Increase the font size */
+}
+
+#lock {
+  margin: 10px;
+  border-radius: 20px;
+  background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+  margin: 10px;
+  border-radius: 20px;
+  background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+  margin: 10px;
+  border-radius: 20px;
+  background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+  margin: 10px;
+  border-radius: 20px;
+  background-image: image(url("icons/hibernate.png"));
+}
+
+#reboot {
+  margin: 10px;
+  border-radius: 20px;
+  background-image: image(url("icons/reboot.png"));
+}
+
+#shutdown {
+  margin: 10px;
+  border-radius: 20px;
+  background-image: image(url("icons/shutdown.png"));
+}
