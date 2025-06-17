@@ -24,8 +24,8 @@ forecast_type = "Daily" # Hourly or Daily
 
 # weather icons
 weather_icons = {
-    "sunnyDay": "滛",
-    "clearNight": "望",
+    "sunnyDay": "",
+    "clearNight": "󰖔",
     "cloudyFoggyDay": "",
     "cloudyFoggyNight": "",
     "rainyDay": "",
@@ -82,7 +82,7 @@ temp_min_max = f"  {temp_min}\t\t  {temp_max}"
 
 # wind speed
 wind_speed = str(html_data("span[data-testid='Wind']").text())
-wind_text = f"煮  {wind_speed}"
+wind_text = f"  {wind_speed}"
 
 # humidity
 humidity = html_data("span[data-testid='PercentageValue']").text()
@@ -107,7 +107,7 @@ t_prediction_text = html_data(f"section[aria-label='{forecast_type} Forecast']")
     "div[data-testid='SegmentHighTemp'] > span"
 ).text()
 t_prediction = str(t_prediction_text).replace(" /", "/")
-t_prediction = f"  滛 ({forecast_type}) {t_prediction}" if len(t_prediction) > 0 else t_prediction
+t_prediction = f"   ({forecast_type}) {t_prediction}" if len(t_prediction) > 0 else t_prediction
 
 #pretty print all data
 # print(f"temp: {temp}\nstatus: {status}\nstatus_code: {status_code}\nicon: {icon}\
