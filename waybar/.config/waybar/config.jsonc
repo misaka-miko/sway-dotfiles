@@ -54,7 +54,6 @@
       "battery",
       "cpu",
       "custom/swaync",
-      "custom/dunst",
     ],
   },
   "group/pill-in#clipboard": {
