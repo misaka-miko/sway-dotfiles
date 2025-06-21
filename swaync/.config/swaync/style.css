@@ -145,7 +145,7 @@
     border-radius: 4px;
     background: #665c54;
     box-shadow: none;
-    border: 0px solid #458588;
+    border: none;
 }
  
 .widget-dnd > switch:checked {
@@ -227,8 +227,13 @@
   border: none;
 }
 
+.widget-volume > box > button:hover {
+  border: none;
+  background: #458588;
+  color: @cc-bg;
+}
 .per-app-volume {
-  background-color: @noti-bg-alt;
+  background-color: @cc-bg;
   color: @text-color;
   padding: 4px 8px 8px 8px;
   margin: 0px 8px 8px 8px;
