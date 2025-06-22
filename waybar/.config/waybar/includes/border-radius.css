@@ -26,6 +26,8 @@ window#waybar.bottom #leaf menu,
 window#waybar.bottom #leaf menuitem,
 window#waybar.bottom #leaf tooltip {
     border-radius: 10pt 0 10pt 0;
+    /* border-radius: 12px; */
+    
 }
 
 window#waybar.left #leaf,
@@ -53,7 +55,8 @@ window#waybar.bottom #leaf-inverse button,
 window#waybar.bottom #leaf-inverse menu,
 window#waybar.bottom #leaf-inverse menuitem,
 window#waybar.bottom #leaf-inverse tooltip {
-    border-radius: 0 10pt 0 10pt;
+    /* border-radius: 0 10pt 0 10pt; */
+    border-radius: 12px;
 }
 
 window#waybar.left #leaf-inverse,
@@ -66,7 +69,8 @@ window#waybar.right #leaf-inverse button,
 window#waybar.right #leaf-inverse menu,
 window#waybar.right #leaf-inverse menuitem,
 window#waybar.right #leaf-inverse tooltip {
-    border-radius: 0 10pt 0 10pt;
+    /* border-radius: 0 10pt 0 10pt; */
+    border-radius: 12px;
 }
 
 
@@ -155,6 +159,7 @@ window#waybar.bottom #pill-in menu,
 window#waybar.bottom #pill-in menuitem,
 window#waybar.bottom #pill-in tooltip {
     border-radius: 10pt 10pt 0 0;
+    
 }
 
 window#waybar.left #pill-in,

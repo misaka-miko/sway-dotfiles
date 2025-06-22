@@ -47,40 +47,44 @@ window#waybar {
     border-color: @main-bg;
 }
 
-
-
-
-
-#workspaces button {
-    box-shadow: none;
-    text-shadow: none;
-    padding: 0em;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-    margin-left: 0em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    margin-right: 0em;
+#workspaces {
+    background: @main-bg;
+    margin: 2px 1px 3px 1px;
+    padding: 0px 1px;
+    border-radius: 15px;
+    border: 0px;
+    font-weight: bold;
+    font-style: normal;
+    opacity: 0.8;
+    font-size: 16px;
     color: @main-fg;
-    animation: ws_normal 20s ease-in-out 1;
 }
 
-#workspaces button.active {
-    background: @wb-act-bg;
+#workspaces button {
+    padding: 0px 5px;
+    margin: 4px 3px;
+    border-radius: 15px;
+    border: 0px;
+    color: @main-fg;
+    background-color: #504945;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+}
+
+#workspaces button.focused {
     color: @wb-act-fg;
-    margin-left: 0.3em;
-    padding-left: 1.2em;
-    padding-right: 1.2em;
-    margin-right: 0.3em;
-    animation: ws_active 20s ease-in-out 1;
-    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+    background: @wb-act-bg;
+    border-radius: 15px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
 }
 
 #workspaces button:hover {
-    background: @wb-hvr-bg;
     color: @wb-hvr-fg;
-    animation: ws_hover 20s ease-in-out 1;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+    background: @wb-hvr-bg;
+    border-radius: 15px;
+    opacity:0.7;
 }
 
 #taskbar button {
