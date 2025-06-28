@@ -52,20 +52,21 @@ return {
                                  ░                  ]],
         },
         sections = {
+          -- {
+          --   pane = 1,
+          --   padding = 1,
+          --   section = "terminal",
+          --   cmd = 'chafa -f symbols  -c full --speed=0.8 --clear --stretch "$HOME/.config/nvim/lua/ui/golang.gif"; sleep .1',
+          --   height = 12, --16
+          --   width = 27, --35
+          --   indent = 19,
+          --
+          --   enabled = function() return not (vim.o.columns < 135) end,
+          -- },
+          { pane = 1, section = "header" },
+          { pane = 1, section = "keys", gap = 1, padding = 1 },
           {
-            pane = 1,
-            padding = 1,
-            section = "terminal",
-            cmd = 'chafa -f symbols  -c full --speed=0.8 --clear --stretch "$HOME/.config/nvim/lua/ui/golang.gif"; sleep .1',
-            height = 12, --16
-            width = 27, --35
-            indent = 19,
-
-            enabled = function() return not (vim.o.columns < 135) end,
-          },
-          { pane = 2, section = "header" },
-          { pane = 2, section = "keys", padding = 1 },
-          {
+            pane = 2,
             icon = " ",
             title = "Git Status",
             section = "terminal",
@@ -76,9 +77,9 @@ return {
             ttl = 5 * 60,
             indent = 3,
           },
-          { pane = 1, icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+          { pane = 2, icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
           { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
-          { pane = 2, section = "startup" },
+          { pane = 1, section = "startup" },
         },
       },
     },
