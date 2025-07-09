@@ -15,6 +15,7 @@ return {
         "lua-language-server",
         "clangd",
         "rust-analyzer",
+        "pyright",
 
         -- install formatters
         "stylua",
