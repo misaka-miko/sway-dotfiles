@@ -5,18 +5,18 @@ hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "7c174cc"
+rev = "b886025"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "7c174cc"
-hash = "b3f1d6ec3721d4061aad5f69cddb0cf9"
+rev = "b886025"
+hash = "f10a14e823382d90fab5b3ee54cb38fe"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "7c174cc"
-hash = "e01006bfb38951ea89031bd918b20dbb"
+rev = "b886025"
+hash = "63b6c222bf2103b3023389dde5e2ecfe"
 
 [[flavor.deps]]
 use = "bennyyip/gruvbox-dark"
